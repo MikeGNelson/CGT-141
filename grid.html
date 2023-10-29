@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        text-align: center;
+    }
+.grid-container {
+  display: grid;
+  
+  grid-template-columns: auto auto auto;
+  background-color: #72ca3b;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.column-gap{
+    column-gap: 50px;
+}
+
+.row-gap{
+    row-gap: 50px;
+}
+
+.gap{
+    gap:50px
+}
+
+.start-stop{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.box{
+    display: grid;
+
+    border: 5px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #792be6;
+
+    grid-gap: 10px;
+    grid-template-columns: repeat( 3, minmax(250px, 1fr) );
+    grid-template-areas:
+    "header header header"
+    "content content sidebar"
+    ".......  footer  ........";
+}
+
+.sidebar img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    float: left;
+    margin-left: 50px;
+
+    border: 5px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #792be6;
+}
+
+.sidebar {
+    grid-area: sidebar;
+  }
+
+  .content {
+    grid-area: content;
+    margin-left: 20px;
+  }
+
+  .header {
+    grid-area: header;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+
+    border: 5px;
+    border-style:solid;
+    border-radius: 100px;
+    border-color: #792be6;
+    background-color: rgb(131, 130, 130);
+    
+  }
+
+  .footer {
+    grid-area: footer;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Grid</h1>
+
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+<h1>column-gap</h1>
+
+<div class="grid-container column-gap">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+<h1>row gap</h1>
+
+<div class="grid-container row-gap">
+  <div class="grid-item">1</div>
+  <div class="grid-item ">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+
+<h1>gap</h1>
+
+<div class="grid-container gap">
+  <div class="grid-item">1</div>
+  <div class="grid-item ">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+<h1>Stop and Start</h1>
+
+<div class="grid-container gap">
+  <div class="grid-item">1</div>
+  <div class="grid-item start-stop">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+
+<h2> Custom Grids</h2>
+<div class="box">
+    <h2 class="header">Title </h2>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, harum. Tempora quod at consectetur impedit explicabo voluptatibus totam aperiam saepe praesentium, esse animi ipsam placeat eum adipisci soluta. Ad, in? </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quae cupiditate ea, quod libero numquam dolores rerum at, dolore dolorem molestiae error culpa illum suscipit perferendis! Magnam sequi iusto voluptatem! </p>
+    </div>
+    <div class="sidebar">
+        <img src="example.jpg">
+    </div>
+    <div class="footer">
+        <a href="#" title="Click here"><p><strong>Click here</strong></p></a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -9,25 +9,90 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333333;
-     }
-     
-     .table {
-        display: table;   /* Allow the centering to work */
-        margin: 0 auto;
+}
+
+.table {
+display: table;   /* Allow the centering to work */
+margin: 0 auto;
+}
+    li {
+        float: left;
     }
-     li {
-    float: left;
-     }
-     
-     li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-     }
-     
-     li a:hover {
-    background-color: #111111;
-     }
     
+    li a {
+display: block;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+    }
+    
+    li a:hover {
+background-color: #111111;
+    }
+    
+    h1{
+        margin: 20px;
+    }
+    
+    
+    .percent{
+        width: 70%;
+        
+    }
+    
+    .viewwidth{
+        width: 70vw;
+    }
+    
+    .absolute{
+        width: 300px;
+    }
+    
+    html{
+        font-size: 30px;
+    }
+    
+    .parent{
+        font-size: 50px
+    }
+    
+    .child{
+        font-size: .5em;
+    }
+    
+    .rem{
+        font-size: 2rem;
+    }
+    
+    /* When width less than 600px */
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: rgb(230, 138, 64);
+        }
+    }
+    
+    /* When width greater than 600px */
+    @media  (min-width: 600px) {
+        body {
+            background-color: rgb(64, 230, 230);
+        }
+    }
+    
+    /* When hovering over an element */
+    @media (hover: hover) {
+        img:hover{
+            border: 30px solid green;
+        }
+      }
+      
+      @media screen, print {
+        /* … */
+      }
+      
+    
+      @media not (min-height: 680px), screen and (orientation: portrait) {
+        body {
+            background-color: rgb(67, 35, 116);
+        }
+      }

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+    text-align: center;
+    background-color:indigo;
+    width: 800px;
+
+}
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+    width: 100%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.column {
+    flex-direction: column;
+    background-color:bisque;
+}
+
+.column-reverse{
+    flex-direction: column-reverse;
+    background-color:aqua;
+}
+
+.row{
+    flex-direction: row;
+    background-color:crimson;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+    background-color: cyan;
+}
+
+.wrap{
+    flex-wrap: wrap;
+    background-color:greenyellow;
+}
+
+.nowrap{
+    flex-wrap: nowrap;
+    background-color:chocolate;
+}
+
+.wrap-reverse{
+    flex-wrap: wrap-reverse;
+    background-color:dimgray;
+}
+
+.center{
+    justify-content: center;
+    background-color:darkviolet;
+}
+
+.start{
+    justify-content: flex-start;
+    background-color: deeppink;
+}
+
+.end{
+    justify-content: flex-end;
+    background-color: blueviolet;
+}
+</style>
+</head>
+<body>
+
+<h1 class="">Flexboxes</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<h1 class="">column</h1>
+<div class="flex-container column">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+  <h1 class="">column-reverse</h1>
+  <div class="flex-container column-reverse">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+  <h1 class="">row</h1>
+  <div class="flex-container row">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+  
+  <h1 class="">row-reverse</h1>
+  <div class="flex-container row-reverse">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+  <h1 class="">wrap</h1>
+  <div class="flex-container wrap">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>  
+  </div>
+
+  <h1 class="">nowrap</h1>
+  <div class="flex-container nowrap">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+    <div>13</div>
+    <div>14</div>
+    <div>15</div> 
+  </div>
+
+  <h1 class="">wrap-reverse</h1>
+  <div class="flex-container wrap-reverse">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+  </div>
+
+  <h1 class="">center</h1>
+  <div class="flex-container center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+  <h1 class="">start</h1>
+  <div class="flex-container start">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+  <h1 class="">end</h1>
+  <div class="flex-container end">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+  </div>
+
+  <h1 class="">Order</h1>
+  <div class="flex-container">
+    <div style="order: 3">1</div>
+    <div style="order: 1">2</div>
+    <div style="order: 2">3</div>  
+  </div>
+
+  <h1 class="">Grow</h1>
+  <div class="flex-container">
+    <div style="flex-grow: 1">1</div>
+    <div style="flex-grow: 1">2</div>
+    <div style="flex-grow: 5">3</div>  
+  </div>
+
+  <h1 class="">Shrink</h1>
+  <div class="flex-container">
+    <div >1</div>
+    <div style="flex-shrink: 0">2</div>
+    <div >3</div>  
+  </div>
+
+  <h1 class="">Basis</h1>
+  <div class="flex-container">
+    <div >1</div>
+    <div style="flex-basis: 400px">2</div>
+    <div >3</div>  
+  </div>
+
+  <h1 class="">align-self</h1>
+  <div class="flex-container" style="height: 200px;">
+    <div style="align-self: flex-start">1</div>
+    <div style="align-self: center">2</div>
+    <div style="align-self: baseline">3</div> 
+    <div style="align-self: flex-end">4</div> 
+     
+  </div>
+  
+
+
+</body>
+</html>
